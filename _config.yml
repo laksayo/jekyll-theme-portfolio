@@ -10,8 +10,8 @@ github_username: laksayo
 
 # Header Pages for Navigation
 header_pages:
-  - "/Info/"
-  - "/Conventions/"
+  - "/info/"
+  - "/conventions/"
   - "/rambles/"
 
 # Build settings
