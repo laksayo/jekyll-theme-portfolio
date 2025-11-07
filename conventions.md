@@ -4,8 +4,18 @@ title: "Conventions"
 permalink: /conventions/  # the permalink should match the page path
 ---
 
-# Conventions
+# Upcoming Conventions & Booths
 
-Welcome to my conventions page!
+Here is where you can find me next!
 
-Here you can list upcoming events, past events, or anything related to conventions.
+- **Doumini 2025**  
+  *Date:* Dec 13-14, 2025  
+  *Location:* [Suntec Convention Centre Hall 405]  
+  Booth: D11
+
+Please stay tuned on social media for catalogues and reservation updates!
+Feel free to message me on instagram for queries~
+
+---
+
+You can read about my ""past convention experiences** on [rambles]({{ "/rambles/" | relative_url }}).
