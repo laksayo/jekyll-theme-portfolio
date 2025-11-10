@@ -6,7 +6,7 @@ categories: [blog]
 tags: [event, boothing]
 author: Laksayo
 image: "/assets/images/my-first-post-image.jpg" # Optional, for a featured image
-excerpt: "This is a brief introduction to my first blog post. Here I talk about my journey and the purpose of this blog."
+excerpt: "I had heard positive feedback about past events held at Taste Orchard, so I decided to take part this time together with Harumoon and Ponponponka. It started like a joke but we went ahead with 3 pimples..."
 permalink: /rambles/fandom-art-fiesta/
 ---
 
