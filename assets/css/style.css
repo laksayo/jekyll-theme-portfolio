@@ -129,26 +129,36 @@ button.outline:hover {
 }
 
 /* ============================= */
-/* Header */
+/* Header / Gradient / Layout */
 /* ============================= */
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* Flex handled inside container for easy alignment */
   padding: 20px 15px;
-
-  /* Gradient from top with opacity */
- background: linear-gradient(
-   180deg,
-     rgba(var(--scheme-4-bg), 0.4) 10%,  /* scheme-4-bg with 10% opacity */
-  var(--scheme-1-bg) 100%       /* scheme-1-bg solid at bottom */
-);
-
+  background: linear-gradient(
+    180deg,
+    rgba(223, 124, 109, 0.1) 0%,  /* top: semi-transparent scheme-4 */
+    var(--scheme-1-bg) 100%        /* bottom: solid scheme-1 */
+  );
 }
 
-.site-header .logo-link { display: block; height: auto; }
+/* Inner container for alignment like footer */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between logo and nav */
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+}
 
-.site-header .logo-image {
+/* Easy alignment classes */
+.header-container.left   { justify-content: flex-start; }
+.header-container.center { justify-content: center; }
+.header-container.right  { justify-content: flex-end; }
+
+/* Logo styling */
+.logo-link { display: block; }
+.logo-image {
   max-height: 50px;
   width: auto;
   display: block;
@@ -161,10 +171,9 @@ button.outline:hover {
   list-style: none;
   display: flex;
   gap: 30px;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 10px;
+  margin: 0;
   padding-left: 0;
+  align-items: center;
 }
 
 .main-nav li { display: inline-block; }
@@ -179,6 +188,7 @@ button.outline:hover {
   transition: color 0.3s ease;
 }
 
+/* Underline animation */
 .main-nav a::after {
   content: '';
   position: absolute;
@@ -193,12 +203,14 @@ button.outline:hover {
 .main-nav a:hover::after,
 .main-nav a:focus::after { width: 100%; }
 
+/* Current page highlight */
 .main-nav a.current {
   color: var(--scheme-2-text);
   font-weight: 600;
 }
 
 .main-nav a.current::after { width: 100%; }
+
 
 /* ============================= */
 /* Site Content Flex for Sticky Footer */
