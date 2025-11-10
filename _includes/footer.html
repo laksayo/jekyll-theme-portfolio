@@ -1,28 +1,21 @@
 <footer class="site-footer scheme-4">
   <div class="container">
-    <div class="footer-container">
-      <!-- Left: Message + Copyright -->
-      <div class="footer-left">
-        <p class="footer-author">{{ site.footer.author }}</p>
-        <p class="footer-message">{{ site.footer.message }}</p>
+    <div class="footer-content">
+      <p class="footer-author">{{ site.footer.author }}</p>
+      <p class="footer-message">{{ site.footer.message }}</p>
 
-        <ul class="social-icons">
-          {% for social in site.footer.social %}
-          <li>
-            <a href="{{ social.url }}" target="_blank" rel="noopener">
-              <img src="{{ social.icon | relative_url }}" alt="{{ social.name }}">
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        
-        <p class="footer-copy">&copy; {{ "now" | date: "%Y" }} {{ site.footer.author }}. {{ site.footer.copyright }}</p>
-      </div>
+      <!-- Social icons under the message -->
+      <ul class="footer-social">
+        {% for social in site.footer.social %}
+        <li>
+          <a href="{{ social.url }}" target="_blank" rel="noopener">
+            <img src="{{ social.icon | relative_url }}" alt="{{ social.name }}">
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
 
-      <!-- Right: Social Icon has been moved to the left side -->
-      <div class="footer-right">
-        
-      </div>
+      <p class="footer-copy">&copy; {{ "now" | date: "%Y" }} {{ site.footer.author }}. {{ site.footer.copyright }}</p>
     </div>
   </div>
 </footer>
