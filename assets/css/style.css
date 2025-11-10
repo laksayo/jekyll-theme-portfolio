@@ -52,7 +52,7 @@ p {
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  color: #892F21; /* fixed menu color */
+  color: inherit; /* alll links default color */
   transition: color 0.3s ease;
 }
 
@@ -73,6 +73,7 @@ p {
 }
 
 .main-nav a.current {
+   color: #892F21; /* only current page link */
   font-weight: 600;
 }
 
@@ -161,10 +162,14 @@ button {
 /* ============================= */
 /* Header & Footer (menu stays fixed) */
 /* ============================= */
-.site-header {
-  border-bottom: 1px solid #eaeaea;
-  padding: 20px 0;
+
+.site-header .logo-image {
+  max-height: 50px;   /* limits the height */
+  width: auto;
+  height: auto;       /* maintain aspect ratio */
+  display: block;
 }
+
 
 .site-footer {
   padding: 40px 0;
