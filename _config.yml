@@ -25,8 +25,9 @@ social:
     icon: /assets/icons/kofi.png
 
 # Footer
-author: Laksayo
-footer_message: "All rights reserved."
+author: "Laksayo"
+footer_message: "Illustration. Imagination. Connection. Always experimenting, always hands-on."
+copyright: "All rights reserved."
 
 # Build settings
 # Remove theme: or remote_theme: because the theme is local
