@@ -203,11 +203,11 @@ button.outline:hover {
 /* ============================= */
 .site-footer {
   font-family: 'Quattrocento Sans', sans-serif;
-  padding: 40px 0;
-  border-top: 2px solid var(--scheme-2-btn-bg);
+  padding: 60px 0; /*vertical padding */
+  border-top: 2px solid var(--scheme-4-btn-bg);
   box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
-  background-color: var(--scheme-2-bg);
-  color: var(--scheme-2-text);
+  background-color: var(--scheme-4-bg);
+  color: var(--scheme-4-text);
 }
 
 .footer-container {
