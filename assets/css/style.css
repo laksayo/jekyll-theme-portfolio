@@ -1,4 +1,49 @@
 /* ============================= */
+/* Import Fonts */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Trirong:wght@400;500;700&family=Quattrocento+Sans:wght@400;500;700&display=swap');
+
+/* ============================= */
+/* Base Typography */
+/* ============================= */
+body {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 16px; /* base font size 100% */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #252525;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Trirong', serif;
+  line-height: 1.3;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Heading scales (approx 110%) */
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.5rem; }
+
+/* Paragraphs and links */
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ============================= */
 /* Color Schemes */
 /* ============================= */
 
@@ -7,143 +52,77 @@ body.scheme-1 {
   background-color: #EFECEC;
   color: #252525;
 }
-
-body.scheme-1 .main-nav a {
-  color: #252525;
-}
-
-body.scheme-1 .main-nav a:hover {
-  color: #2C332F;
-}
-
-body.scheme-1 .logo-link {
-  color: #252525;
-}
-
-/* Solid button example */
-button.scheme-1 {
-  background-color: #2C332F;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-button.scheme-1.outline {
-  background-color: transparent;
-  color: #505655;
-  border: 1px solid #505655;
-  padding: 10px 20px;
-}
+body.scheme-1 .main-nav a { color: #252525; }
+body.scheme-1 .main-nav a:hover { color: #2C332F; }
+button.scheme-1 { background-color: #2C332F; color: #FFFFFF; border: none; padding: 10px 20px; cursor: pointer; }
+button.scheme-1.outline { background-color: transparent; color: #505655; border: 1px solid #505655; }
 
 /* Scheme 2 */
-body.scheme-2 {
-  background-color: #F8F6F6;
-  color: #892F21;
-}
-
-body.scheme-2 .main-nav a {
-  color: #892F21;
-}
-
-body.scheme-2 .main-nav a:hover {
-  color: #DF7C6D;
-}
-
-button.scheme-2 {
-  background-color: #DF7C6D;
-  color: #FFFFFF;
-}
-
-button.scheme-2.outline {
-  background-color: transparent;
-  color: #505655;
-  border: 1px solid #505655;
-}
+body.scheme-2 { background-color: #F8F6F6; color: #892F21; }
+body.scheme-2 .main-nav a { color: #892F21; }
+body.scheme-2 .main-nav a:hover { color: #DF7C6D; }
+button.scheme-2 { background-color: #DF7C6D; color: #FFFFFF; border: none; padding: 10px 20px; cursor: pointer; }
+button.scheme-2.outline { background-color: transparent; color: #505655; border: 1px solid #505655; }
 
 /* Scheme 3 */
-body.scheme-3 {
-  background-color: #716A56;
-  color: #EFECEC;
-}
-
-body.scheme-3 .main-nav a {
-  color: #EFECEC;
-}
-
-body.scheme-3 .main-nav a:hover {
-  color: #EFECEC;
-}
-
-button.scheme-3 {
-  background-color: #EFECEC;
-  color: #716A56;
-}
-
-button.scheme-3.outline {
-  background-color: transparent;
-  color: #EFECEC;
-  border: 1px solid #EFECEC;
-}
+body.scheme-3 { background-color: #716A56; color: #EFECEC; }
+body.scheme-3 .main-nav a { color: #EFECEC; }
+body.scheme-3 .main-nav a:hover { color: #EFECEC; }
+button.scheme-3 { background-color: #EFECEC; color: #716A56; border: none; padding: 10px 20px; cursor: pointer; }
+button.scheme-3.outline { background-color: transparent; color: #EFECEC; border: 1px solid #EFECEC; }
 
 /* Scheme 4 */
-body.scheme-4 {
-  background-color: #DF7C6D;
-  color: #EFECEC;
-}
+body.scheme-4 { background-color: #DF7C6D; color: #EFECEC; }
+body.scheme-4 .main-nav a { color: #EFECEC; }
+body.scheme-4 .main-nav a:hover { color: #2C332F; }
+button.scheme-4 { background-color: #EFECEC; color: #2C332F; border: none; padding: 10px 20px; cursor: pointer; }
+button.scheme-4.outline { background-color: transparent; color: #EFECEC; border: 1px solid #EFECEC; }
 
-body.scheme-4 .main-nav a {
-  color: #EFECEC;
-}
-
-body.scheme-4 .main-nav a:hover {
-  color: #2C332F;
-}
-
-button.scheme-4 {
-  background-color: #EFECEC;
-  color: #2C332F;
-}
-
-button.scheme-4.outline {
-  background-color: transparent;
-  color: #EFECEC;
-  border: 1px solid #EFECEC;
-}
-
-/* Container to center header content */
+/* ============================= */
+/* Layout Containers & Grid */
+/* ============================= */
 .container {
-  max-width: 1080px;
+  max-width: 1600px; /* Shopify page width */
   width: 90%;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/* Header styling */
+.section {
+  margin: 0; /* no space between sections */
+  padding: 20px 0; /* vertical spacing inside section */
+}
+
+.grid {
+  display: grid;
+  gap: 20px 20px; /* vertical | horizontal spacing */
+}
+
+/* ============================= */
+/* Header Styling */
+/* ============================= */
 .site-header {
   border-bottom: 1px solid #eaeaea;
   background-color: white;
   padding: 20px 0;
 }
 
-/* Logo */
 .header-top .logo-link {
   display: inline-block;
 }
 
 .header-top .logo-image {
-  height: 50px; /* adjust size as needed */
+  height: 50px;
   width: auto;
 }
 
-/* Navigation */
 .main-nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 10px; /* space below logo */
+  margin-top: 10px;
   padding-left: 0;
 }
 
@@ -153,7 +132,6 @@ button.scheme-4.outline {
 
 .main-nav a {
   text-decoration: none;
-  color: #555;
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -161,26 +139,23 @@ button.scheme-4.outline {
 
 .main-nav a:hover,
 .main-nav a:focus {
-  color: #008060; /* Shopify-style green hover */
+  color: #008060; /* Shopify-style green hover fallback */
   outline: none;
 }
 
-/* Responsive for smaller screens */
+/* Buttons in header or sections */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ============================= */
+/* Responsive Styling */
+/* ============================= */
 @media (max-width: 720px) {
   .main-nav ul {
     flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-  }
-
-  .site-header {
-    padding: 15px 0;
-  }
-
-  .container {
-    width: 95%;
-    padding: 0 10px;
-  }
-}
-
-     
+    gap:
