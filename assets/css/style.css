@@ -220,7 +220,7 @@ button.outline:hover {
 .footer-right .social-icons {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px; /*bigger spacing*/
   padding-left: 0;
   margin: 0;
 }
