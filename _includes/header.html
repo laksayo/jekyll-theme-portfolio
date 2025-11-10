@@ -1,23 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/info/">Info</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/conventions/">Conventions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/rambles/">Rambles</a>
-        </li>
-      </ul>
-    </div>
+<header class="site-header">
+  <!-- Logo -->
+  <div class="header-top">
+    <a href="{{ site.homepage | relative_url }}" class="logo-link">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="@Laksayo Logo" class="logo-image" />
+    </a>
   </div>
-</nav>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="https://yourshopifyurl.com" target="_blank" rel="noopener">Laksayo's Store</a></li>
+      <li><a href="{{ '/info/' | relative_url }}">Info</a></li>
+      <li><a href="{{ '/conventions/' | relative_url }}">Con Reservations</a></li>
+      <li><a href="{{ '/rambles/' | relative_url }}">Rambles</a></li>
+    </ul>
+  </nav>
+</header>
