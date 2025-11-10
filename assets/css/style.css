@@ -205,32 +205,27 @@ button.outline:hover {
 /* ============================= */
 .site-content { flex: 1; }
 
-/* ============================= */
-/* Footer Flexible Layout */
-/* ============================= */
+/* Footer Base */
 .site-footer {
   font-family: 'Quattrocento Sans', sans-serif;
-  padding: 60px 20px;
-  border-top: 2px solid var(--scheme-4-btn-bg);
+  padding: 60px 0;
   background-color: var(--scheme-4-bg);
   color: var(--scheme-4-text);
 }
 
-/* Footer Container Flex */
-.footer-container {
-  display: flex;
-  justify-content: space-between; /* default: left + right */
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
+.site-footer .container {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* Footer Left Text */
-.footer-left {
-  flex: 1 1 300px;
+/* Footer Content */
+.footer-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: flex-start; /* left-align by default */
+  gap: 12px;
 }
 
 .footer-author {
@@ -244,22 +239,25 @@ button.outline:hover {
   margin: 0;
 }
 
-/* Social Icons Container */
-.footer-social {
-  display: flex;
-  justify-content: flex-start; /* change to center or flex-end if needed */
-  gap: 15px;
-  margin: 10px 0; /* spacing between message and copyright */
+.footer-copy {
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #555;
 }
 
-.footer-social li {
+/* Social Icons */
+.footer-social {
   list-style: none;
+  display: flex;
+  gap: 12px;
+  padding-left: 0;
+  margin: 6px 0;
 }
 
 .footer-social li img {
+  height: 20px; /* small consistent size */
+  width: 20px;
   display: block;
-  width: 20px;   /* smaller than default */
-  height: 20px;  /* smaller than default */
   transition: opacity 0.3s ease;
 }
 
@@ -267,27 +265,24 @@ button.outline:hover {
   opacity: 0.7;
 }
 
-/* Footer Copyright */
-.footer-copy {
-  font-size: 0.85rem;
-  margin-top: 5px;
-  color: #555;
+/* Links */
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Responsive Footer */
+.site-footer a:hover {
+  color: var(--scheme-2-btn-bg);
+}
+
+/* Responsive */
 @media (max-width: 720px) {
-  .footer-container {
-    flex-direction: column;
+  .footer-content {
     align-items: center;
     text-align: center;
-  }
-
-  .footer-left {
-    align-items: center;
   }
 
   .footer-social {
     justify-content: center;
   }
 }
-
