@@ -287,17 +287,24 @@ body.scheme-4 .site-footer a:hover {
   transition: color 0.3s ease;
 }
 
+/* ============================= */
+/* Navigation Hover & Current Page */
+/* ============================= */
+
+/* Hover effect */
 .main-nav a:hover,
 .main-nav a:focus {
-  color: #008060;
   text-decoration: underline;
   outline: none;
 }
 
+/* Current page styling */
 .main-nav a.current {
-  text-decoration: underline;
-  font-weight: 600; /* optional for emphasis */
+  text-decoration: underline; /* keep underline for current page */
+  font-weight: 600;           /* optional emphasis */
+  color: #DF7C6D;             /* Scheme 2 color */
 }
+
 
 /* Buttons in header or sections */
 button {
