@@ -24,6 +24,10 @@ social:
     url: https://kofi.com/laksayo
     icon: /assets/icons/kofi.png
 
+# Footer
+author: Laksayo
+footer_message: "© 2025, laksayo. All rights Reserved."
+
 # Build settings
 # Remove theme: or remote_theme: because the theme is local
 plugins:
