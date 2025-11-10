@@ -353,21 +353,6 @@ body {
 }
 
 /* ============================= */
-/* Responsive Footer */
-/* ============================= */
-@media (max-width: 720px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-right {
-    margin-top: 15px;
-    justify-content: center;
-  }
-}
-
-/* ============================= */
 /* Responsive Footer Alignment */
 /* ============================= */
 @media (max-width: 720px) {
@@ -382,6 +367,7 @@ body {
   .footer-right {
     width: 100%;
     display: flex;
+    margin-top: 15px;
     justify-content: center;
   }
 
