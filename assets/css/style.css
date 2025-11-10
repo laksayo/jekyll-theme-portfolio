@@ -213,6 +213,47 @@ button {
 .site-footer .footer-right .social-icons li a:hover img {
   opacity: 0.7; /* subtle hover effect */
 }
+/* Sticky footer setup */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.site-content {
+  flex: 1; /* main content takes available space */
+}
+
+/* Footer styling for Scheme 2 */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #F8F6F6; /* Scheme 2 background */
+  color: #892F21; /* Scheme 2 text */
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.site-footer a {
+  color: #892F21;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.site-footer a:hover {
+  color: #DF7C6D;
+}
+
+/* Social icons */
+.site-footer .social-icons img {
+  height: 24px;
+  width: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 
 /* Responsive: stack on small screens */
 @media (max-width: 720px) {
