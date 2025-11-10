@@ -205,7 +205,7 @@ button.outline:hover {
 /* ============================= */
 .site-content { flex: 1; }
 
-/* Footer Base */
+/* Footer main container */
 .site-footer {
   font-family: 'Quattrocento Sans', sans-serif;
   padding: 60px 0;
@@ -213,51 +213,39 @@ button.outline:hover {
   color: var(--scheme-4-text);
 }
 
+/* Inner container */
 .site-footer .container {
   max-width: 1600px;
   width: 90%;
   margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Footer Content */
-.footer-content {
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* left-align by default */
-  gap: 12px;
+  align-items: center;
+  text-align: center;
+  gap: 20px; /* space between items */
 }
 
+/* Footer author */
 .footer-author {
   font-weight: 700;
   font-size: 1.25rem;
   margin: 0;
 }
 
-.footer-message {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.footer-copy {
-  font-size: 0.85rem;
-  margin-top: 10px;
-  color: #555;
-}
-
-/* Social Icons */
+/* Footer social icons */
 .footer-social {
   list-style: none;
   display: flex;
-  gap: 12px;
-  padding-left: 0;
-  margin: 6px 0;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-social li img {
-  height: 20px; /* small consistent size */
-  width: 20px;
   display: block;
+  width: 18px;
+  height: 18px;
   transition: opacity 0.3s ease;
 }
 
@@ -265,24 +253,34 @@ button.outline:hover {
   opacity: 0.7;
 }
 
-/* Links */
-.site-footer a {
-  color: inherit;
-  text-decoration: none;
+/* Footer message */
+.footer-message {
+  font-size: 0.85rem;
+  margin: 0;
 }
 
-.site-footer a:hover {
-  color: var(--scheme-2-btn-bg);
+/* Footer copyright */
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5); /* lighter */
+  margin-top: 60px; /* pushes it down */
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 720px) {
-  .footer-content {
-    align-items: center;
-    text-align: center;
+  .site-footer .container {
+    gap: 15px;
   }
 
   .footer-social {
-    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-message {
+    font-size: 0.8rem;
+  }
+
+  .footer-copy {
+    margin-top: 40px;
   }
 }
