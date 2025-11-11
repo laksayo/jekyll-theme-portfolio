@@ -10,8 +10,6 @@ excerpt: "I had heard positive feedback about past events held at Taste Orchard,
 permalink: /rambles/fandom-art-fiesta/
 ---
 
-# Fandom Art Fiesta 2025
-
 I had heard positive feedback about past events held at Taste Orchard, so I decided to take part this time together with Harumoon and Ponponponka. It started like a joke but we went ahead with 3 pimples... — Please look at our 3 pimples origin story in the image below.
 
 I was looking forward to the start of the 3 pimples saga. Somehow we ended up signing up for 3 events in a row and this event was the first time 3 pimples will truly begin. As this was a change from the usual amount of table space I have at cons, I had prepared for it and did a few mock set ups beforehand to make the best use of space.
