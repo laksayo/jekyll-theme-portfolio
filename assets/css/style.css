@@ -369,12 +369,19 @@ p {
 }
 
 /* ============================= */
-/* Body content */
+/* Main content Container */
 /* ============================= */
 
 /* Wrap all main content */
 .main-content {
   max-width: 900px;   /* adjust for your preference */
-  margin: 0 auto;     /* centers content */
+  margin: 0 auto;     /* centers content horizontally */
   padding: 0 20px;    /* space on left/right */
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0 15px:
+  }
 }
