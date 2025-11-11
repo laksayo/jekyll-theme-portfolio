@@ -87,6 +87,8 @@ body {
   font-weight: 200; 
   word-break: break-word;
   color: var(--text, rgb(37,37,37)); /*allows for color scheme overrides */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 /* Individual heading sizes and spacing */
