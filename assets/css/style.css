@@ -378,7 +378,7 @@ button.outline:hover {
 .main-content {
   max-width: 900px;   /* adjust for your preference */
   margin: 0 auto;     /* centers content horizontally */
-  padding: 0 20px;    /* space on left/right */
+  padding: 40px 20px 20px;    /* space on left/right */
   box-sizing: border-box;
 }
 
