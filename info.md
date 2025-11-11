@@ -15,6 +15,6 @@ I started tabling at conventions in 2014 with a group of friends, and that exper
 I’m always excited to meet new people, share my art, and make lasting connections along the way. Let’s keep creating and celebrating the things we love, together!
 
 
-## Thank you so much for supporting my small business — it truly means the world to me! :>
+### Thank you so much for supporting my small business — it truly means the world to me! :>
 
 At the moment, I am no longer selling items internationally or online. I will still be selling at conventions and you can check [Conventions page]({{ "/conventions/" | relative_url }}) to see where and when my booth will pop up next!
