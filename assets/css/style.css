@@ -248,7 +248,7 @@ button.outline:hover {
   font-family: 'Trirong', serif; /* chosen default font */
   font-weight: 300; /* default font weight is 400 */
   font-size: 1rem;
-  color: rgba(37,37,37,var(--body-opacity)); /* lighter default opacity */
+  color: rgba(37,37,37,0.75)); /* lighter default opacity, separate from body opacity */
   transition: color 0.3s ease;
 }
 
