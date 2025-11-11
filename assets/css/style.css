@@ -33,6 +33,20 @@
 }
 
 /* ============================= */
+/* Global Body / Flex Layout for Sticky Footer */
+/* ============================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1 0 auto;
+}
+/* ============================= */
 /* Fonts */
 /* ============================= */
 @import url('https://fonts.googleapis.com/css2?family=Trirong:wght@400;500;700&family=Quattrocento+Sans:wght@300;400;500;700&display=swap');
@@ -250,10 +264,6 @@ button.outline:hover {
   }
 }
 
-/* ============================= */
-/* Site Content Flex for Sticky Footer */
-/* ============================= */
-.site-content { flex: 1; }
 
 /* Footer main container */
 .site-footer {
