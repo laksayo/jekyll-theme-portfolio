@@ -6,13 +6,15 @@ layout: default
   <header>
     <h1>{{ page.title | escape }}</h1>
     <p class="text-muted">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {%- assign date_format = "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+    {%- assign date_format = "%b %-d, %Y" -%}
+    {{ page.date | date: date_format }}
+  </time>
+      {%- comment -%}
       {%- if page.author -%}
         • {{ page.author }}
       {%- endif -%}
+      {%- endcomment -%}
     </p>
   </header>
 
