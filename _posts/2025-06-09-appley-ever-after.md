@@ -6,8 +6,8 @@ categories: [blog]
 tags: [event, cafe]
 author: Laksayo
 image: "/assets/images/my-first-post-image.jpg" # Optional, for a featured image
-excerpt: "I had heard positive feedback about past events held at Taste Orchard, so I decided to take part this time together with Harumoon and Ponponponka. It started like a joke but we went ahead with 3 pimples..."
-permalink: /rambles/fandom-art-fiesta/
+excerpt: 
+permalink: /rambles/apple-y-ever-after/
 ---
 
 Apple-y Ever After is an unofficial Caleb Cupsleeve Fancafe held on 7-8 June at 5themoments Jalan Besar branch. We began working and planning for the cafe since January this year, when we were drinking at the bar under the first anniversary billboard. What started as a casual remark and idea became our passion project for the next 6 months.
