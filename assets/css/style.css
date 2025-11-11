@@ -57,7 +57,7 @@ body {
 /* ============================= */
 /* Fonts */
 /* ============================= */
-@import url('https://fonts.googleapis.com/css2?family=Trirong:wght@300,400;500;700&family=Quattrocento+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong:wght@200,300,400;&family=Quattrocento+Sans:wght@300;400;500;700&display=swap');
 
 /* ============================= */
 /* Base Typography */
@@ -84,7 +84,7 @@ body {
 .main-content h6 {
   font-family: 'Trirong', serif;
   font-style: normal;
-  font-weight: 300; 
+  font-weight: 200; 
   word-break: break-word;
   color: var(--text, rgb(37,37,37)); /*allows for color scheme overrides */
 }
