@@ -1,5 +1,25 @@
 ---
-layout: blog
+layout: default
 title: rambles
 body_class: blog-page
 ---
+
+<section id="blog-container">
+  <div class="blog-grid">
+    {% for post in site.posts %}
+      <article class="blog-card">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </a>
+        <header>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        </header>
+        <section class="excerpt">
+          {{ post.excerpt }}
+          <p><a href="{{ post.url | relative_url }}">Read more →</a></p>
+        </section>
+      </article>
+    {% endfor %}
+  </div>
+</section>
