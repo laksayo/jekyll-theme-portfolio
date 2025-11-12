@@ -11,11 +11,12 @@
     {%- include header.html -%}
 
     <!-- Main content (for sticky footer) -->
-    <main class="site-content">
-      <div class="main-content {% if page.body_class == 'blog-page' %}full-width{% endif %}">
-        {{ content }}
-      </div>
-    </main>
+  <main class="site-content">
+    <div class="main-content {% if page.body_class == 'blog-page' %}full-width{% endif %}">
+      {{ content }}
+    </div>
+  </main>
+
 
     <!-- Footer -->
     <footer class="site-footer scheme-4">
