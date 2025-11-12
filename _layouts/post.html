@@ -5,11 +5,12 @@ layout: default
 
   <header>
     <h2>{{ page.title | escape }}</h2>
-    <p class="text-muted">
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-    {%- assign date_format = "%b %-d, %Y" -%}
-    {{ page.date | date: date_format }}
-  </time> {%- comment -%}
+    <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+      {%- assign date_format = "%B %-d, %Y" -%}  <!-- Full month name -->
+      {{ page.date | date: date_format }}
+    </time> 
+      {%- comment -%}
       {%- if page.author -%}
         • {{ page.author }}
       {%- endif -%}
