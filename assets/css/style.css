@@ -438,6 +438,12 @@ button.outline:hover {
   line-height: 1.5;
 }
 
+body.blog .content-wrapper {
+  max-width: 1200px; /* wider than default */
+  margin: 0 auto;    /* center it */
+  padding: 0 1rem;   /* optional side padding */
+}
+
 /* ============================= */
 /* Blog Post Date Styling */
 /* ============================= */
