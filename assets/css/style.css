@@ -438,8 +438,9 @@ button.outline:hover {
   line-height: 1.5;
 }
 
-body.blog .content-wrapper {
-  max-width: 1200px; /* wider than default */
+#blog-container {
+  max-width: 2400px; /* wider than default */
+  width: 90%
   margin: 0 auto;    /* center it */
   padding: 0 1rem;   /* optional side padding */
 }
