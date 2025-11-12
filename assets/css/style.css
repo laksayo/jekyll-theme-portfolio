@@ -434,7 +434,7 @@ button.outline:hover {
 }
 
 .blog-card h2 a {
-  color: var(--color-scheme-1);
+  color: var(--scheme-1-bg);
 }
 
 .blog-card .excerpt {
@@ -444,7 +444,7 @@ button.outline:hover {
 
 #blog-container {
   max-width: 2400px; /* wider than default */
-  width: 90%
+  width: 90%;
   margin: 0 auto;    /* center it */
   padding: 0 1rem;   /* optional side padding */
 }
