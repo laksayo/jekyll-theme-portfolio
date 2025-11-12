@@ -1,31 +1,82 @@
 ---
-layout: default
 title: rambles
 body_class: blog-page
 ---
-<!-- USING BLOG LAYOUT -->
-<section id="blog-container" class="blog-page">
-  <div class="main-content full-width">
-    <div class="blog-grid">
-      {% for post in site.posts %}
-      <article class="blog-card">
-        {% if post.featured_image %}
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="laksayo">
+  <meta name="description" content="Showcase of art and blog">
+  <title>{{ page.title }} | Laksayo’s portfolio and blog</title>
+  
+  <!-- Jekyll SEO plugin tags -->
+  {% seo %}
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="{{ page.body_class }} scheme-1">
+
+  <!-- Header -->
+  <header class="site-header scheme-1">
+    <div class="header-container">
+      <nav class="main-nav site-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/info/">Info</a></li>
+          <li><a href="/conventions/">Conventions</a></li>
+          <li><a href="/rambles/">rambles</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-top">
+        <a href="/" class="logo-link">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="@Laksayo Logo" class="logo-image" />
         </a>
-        {% endif %}
-
-        <header>
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-          <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
-        </header>
-
-        <section class="excerpt">
-          {{ post.excerpt | strip_html | truncate: 200 }}...
-          <p><a href="{{ post.url | relative_url }}">Read more →</a></p>
-        </section>
-      </article>
-      {% endfor %}
+      </div>
     </div>
-  </div>
-</section>
+
+    <script>
+      const currentPath = window.location.pathname.replace(/\/$/, '');
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        const linkPath = new URL(link.href).pathname.replace(/\/$/, '');
+        if (linkPath === currentPath) link.classList.add('current');
+      });
+    </script>
+  </header>
+
+  <!-- Main content -->
+  <main class="site-content">
+    <div class="main-content full-width">
+      <section id="blog-container">
+        <div class="blog-grid">
+          {% for post in site.posts %}
+          <article class="blog-card">
+            {% if post.featured_image %}
+              <a href="{{ post.url | relative_url }}">
+                <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}">
+              </a>
+            {% endif %}
+
+            <header>
+              <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+              <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+            </header>
+
+            <section class="excerpt">
+              {{ post.excerpt | strip_html | truncate: 200 }}...
+              <p><a href="{{ post.url | relative_url }}">Read more →</a></p>
+            </section>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer scheme-4">
+    <di
