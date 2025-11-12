@@ -449,44 +449,100 @@ button.outline:hover {
   line-height: 1.5;
 }
 
-/* Blog index page */
+/* ============================= */
+/* Blog Index Page - Updated Layout + Compact Cards */
+/* ============================= */
+
+/* Wider layout for blog page */
 body.blog-page .main-content {
-  max-width: 2400px;   /* wide container */
-  width: 95%;          /* almost full width of viewport */
+  max-width: 100%;       /* take full available width */
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 3rem;    /* moderate spacing around content */
 }
 
-/* Blog grid (horizontal cards) */
+/* Blog grid: compact gaps */
 body.blog-page .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* wider cards */
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 1.5rem 2rem;      /* tighter gaps vertically and horizontally */
+  margin-top: 1.5rem;
 }
 
-/* Blog cards: horizontal layout */
+/* Horizontal blog cards */
 body.blog-page .blog-card {
   display: flex;
-  flex-direction: row;   /* cards go horizontal */
-  background-color: var(--color-scheme-1);
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: var(--scheme-1-bg);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Image on the left, content on the right */
-body.blog-page .blog-card img {
-  width: 40%;           /* image takes left side */
-  height: auto;
-  object-fit: cover;
+body.blog-page .blog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
+/* Image section (left side) */
+body.blog-page .blog-card img {
+  width: 40%;
+  aspect-ratio: 4/3;     /* consistent ratio */
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Text content (right side) */
 body.blog-page .blog-card header,
 body.blog-page .blog-card .excerpt {
-  padding: 1rem;
-  width: 60%;           /* content takes right side */
+  padding: 0.75rem 1rem; /* less padding inside */
+  width: 60%;
 }
+
+/* Title + Date + Excerpt spacing */
+body.blog-page .blog-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+body.blog-page .blog-card .post-date {
+  font-size: 0.7rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #6c757d;
+  letter-spacing: 0.05em;
+}
+
+body.blog-page .blog-card .excerpt {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+/* Mobile-friendly stacked layout */
+@media (max-width: 720px) {
+  body.blog-page .main-content {
+    padding: 1.5rem;
+  }
+
+  body.blog-page .blog-card {
+    flex-direction: column;
+  }
+
+  body.blog-page .blog-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  body.blog-page .blog-card header,
+  body.blog-page .blog-card .excerpt {
+    width: 100%;
+  }
+}
+
 
 /* ============================= */
 /* Blog Post Date Styling */
