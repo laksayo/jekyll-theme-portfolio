@@ -437,3 +437,36 @@ button.outline:hover {
   display: block;             /* ensures proper spacing if inline by default */
   letter-spacing: 0.05em;     /* spreading out letters for readability in caps */
 }
+
+/* ============================= */
+/* Blog Post Media Grid (images + videos) */
+/* ============================= */
+.post-featured-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.post-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.post-media-grid img,
+.post-media-grid video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.post-media-grid video {
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
