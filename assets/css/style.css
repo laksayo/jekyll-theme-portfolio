@@ -397,35 +397,42 @@ button.outline:hover {
 }
 
 /* ============================= */
-/* Blog styling */
+/* Blog styling - updated */
 /* ============================= */
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem 3rem; /* row-gap column-gap */
   margin-top: 2rem;
 }
 
 .blog-card {
   background-color: var(--color-scheme-1);
   border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* faint shadow */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .blog-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .blog-card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
   display: block;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0; /* no extra spacing, padding is in card */
+}
+
+.blog-card header,
+.blog-card .excerpt {
+  padding: 1rem;
 }
 
 .blog-card h2 {
@@ -445,9 +452,10 @@ button.outline:hover {
 #blog-container {
   max-width: 2400px; /* wider than default */
   width: 90%;
-  margin: 0 auto;    /* center it */
-  padding: 0 1rem;   /* optional side padding */
+  margin: 0 auto;
+  padding: 0 1rem;
 }
+
 
 /* ============================= */
 /* Blog Post Date Styling */
@@ -467,7 +475,7 @@ button.outline:hover {
 /* ============================= */
 .post-featured-image img {
   width: 100%;
-  aspect-ratio:1/1;
+  aspect-ratio:16/9;
   object-fit: cover;
   border-radius: 8px;
   margin: 1.5rem 0;
