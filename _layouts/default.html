@@ -5,7 +5,7 @@
   <!-- Link your main stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <body class="scheme-1">
+  <body class="scheme-1 {% if page.layout == 'blog' %}blog-page{% endif %}">
     <!-- Header -->
     {%- include header.html -%}
 
