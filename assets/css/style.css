@@ -449,13 +449,26 @@ button.outline:hover {
   line-height: 1.5;
 }
 
-#blog-container {
+/* Blog index page */
+.blog-page #blog-container {
   max-width: 2400px; /* wider than default */
   width: 90%;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* Make the grid inside stretch nicely */
+#blog-container .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;  /* space between cards */
+}
+
+/* Optional: make blog cards fill their grid cell */
+#blog-container .blog-card {
+  display: flex;
+  flex-direction: column;
+}
 
 /* ============================= */
 /* Blog Post Date Styling */
