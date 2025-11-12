@@ -5,7 +5,7 @@ date: 2025-09-08 12:00:00 +0000
 categories: [blog]
 tags: [event, boothing]
 author: Laksayo
-featured_image: "/assets/images/rambles/faf-1"
+featured_image: "/assets/images/rambles/faf-1.jpg"
 media:
   - type: image
     src: "assets/images/rambles/3pimples-originstory.jpg"
