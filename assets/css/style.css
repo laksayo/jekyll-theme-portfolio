@@ -457,7 +457,7 @@ button.outline:hover {
 
 /* Main content wrapper */
 body.blog-page .main-content {
-  max-width: 1600px;
+  max-width: 1200px;
   width: 90%;
   margin: 0 auto;
   padding: 2rem 3rem;
