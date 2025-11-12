@@ -450,24 +450,42 @@ button.outline:hover {
 }
 
 /* Blog index page */
-body.blog-page #main-content {
-  max-width: 2400px; /* wider than default */
-  width: 90%;
+body.blog-page .main-content {
+  max-width: 2400px;   /* wide container */
+  width: 95%;          /* almost full width of viewport */
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Make the grid inside stretch nicely */
+/* Blog grid (horizontal cards) */
 body.blog-page .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;  /* space between cards */
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* wider cards */
+  gap: 2rem;
 }
 
-/* Optional: make blog cards fill their grid cell */
+/* Blog cards: horizontal layout */
 body.blog-page .blog-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;   /* cards go horizontal */
+  background-color: var(--color-scheme-1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Image on the left, content on the right */
+body.blog-page .blog-card img {
+  width: 40%;           /* image takes left side */
+  height: auto;
+  object-fit: cover;
+}
+
+body.blog-page .blog-card header,
+body.blog-page .blog-card .excerpt {
+  padding: 1rem;
+  width: 60%;           /* content takes right side */
 }
 
 /* ============================= */
