@@ -9,11 +9,11 @@ body_class: blog-page
   <div class="blog-grid">
     {% for post in site.posts %}
       <article class="blog-card">
-        <a href="{{ post.url | relative_url }}">
-          {% if post.image %}
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-          {% endif %}
-        </a>
+        {% if post.featured_image %}
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}">
+          </a>
+        {% endif %}
         <header>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
