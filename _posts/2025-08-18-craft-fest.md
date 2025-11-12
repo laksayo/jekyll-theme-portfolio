@@ -5,7 +5,7 @@ date: 2025-08-18 12:00:00 +0000
 categories: [blog]
 tags: [event, boothing]
 author: Laksayo
-featured image: "/assets/images/rambles/craftfest-1.jpg"
+featured_image: "/assets/images/rambles/craftfest-1.jpg"
 media:
   - type: image
     src: 
