@@ -507,7 +507,7 @@ body.blog-page .blog-card img {
 
 body.blog-page .blog-card header {
   padding: 0.5rem 1rem 0.25rem;               /* full width below image */
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   gap: 0.25rem; /* small vertical spacing between title/date/excerpt */
