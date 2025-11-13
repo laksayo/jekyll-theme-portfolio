@@ -500,6 +500,11 @@ body.blog-page .blog-card header {
   
 }
 
+body.blog-page .blog-card header p,
+body.blog-page .blog-card .excerpt p {
+  margin: 0;
+}
+
 /* Title + date + excerpt */
 body.blog-page .blog-card h2 {
   font-size: 1.4rem;
@@ -523,18 +528,20 @@ body.blog-page .blog-card .card-content {
 }
 
 body.blog-page .blog-card .excerpt {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* space between excerpt text and read more */
   overflow:hidden;
   font-size: 0.95rem;
   line-height: 1.4;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box; /* for clamp */
   margin: 0;
-  width: 100%;  
 }
 
-body.blog-page .blog-card .read-more {
-  margin-top: auto; /* sticks at bottom */
+body.blog-page .blog-card .excerpt a {
+  margin-top: auto; /* pushes link to bottom of excerpt box */
   text-decoration: none;
 }
 
