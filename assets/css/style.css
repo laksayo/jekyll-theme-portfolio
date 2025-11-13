@@ -535,15 +535,19 @@ body.blog-page .blog-card .card-content {
   flex-grow: 1; /* allows content to expand inside card */
 }
 
-body.blog-page .blog-card .excerpt {
+body.blog-page .blog-card .excerpt-text {
   display: -webkit-box; /* for clamp */
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow:hidden;
   font-size: 0.95rem;
   line-height: 1.4;
   margin: 0;
   padding: 0.25rem 1rem 0.25rem 1rem;
+}
+
+.blog-card .excerpt p {
+  margin: 0.5rem 0 0 0;  /* give a bit of spacing above "Read more" */
 }
 
 /* Read more link styling */
