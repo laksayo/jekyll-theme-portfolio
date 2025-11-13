@@ -6,6 +6,7 @@ categories: [blog]
 tags: [event, cafe]
 author: Laksayo
 featured_image: "assets/images/rambles/aef4.jpg"
+media_columns: 4
 media:
   - type: image
     src: "assets/images/rambles/aef1.jpg"

@@ -2,6 +2,7 @@
 layout: default
 ---
 <article>
+<pre>{{ page.media | jsonify }}</pre>
 
   <!-- Header with title and date -->
   <header>
@@ -19,11 +20,13 @@ layout: default
     </p>
 
     <!-- Featured image if exists -->
+    {%- comment -%}
     {% if page.featured_image %}
     <div class="post-featured-image">
       <img src="{{ page.featured_image }}" alt="{{ page.title | escape }}">
     </div>
     {% endif %}
+    {%- endcomment -%}
   </header>
 
   <!-- Main content -->
@@ -32,13 +35,13 @@ layout: default
 
     <!-- Media grid (images/videos) -->
     {% if page.media %}
-    <div class="post-media-grid">
+    <div class="post-media-grid {% if page.media_columns %}columns-{{ page.media_columns }}{% endif %}">
       {% for item in page.media %}
         {% if item.type == "image" %}
-          <img src="{{ item.src }}" alt="Post image {{ forloop.index }}">
+          <img src="{{ item.src | relative_url }}" alt="Post image {{ forloop.index }}">
         {% elsif item.type == "video" %}
-          <video controls>
-            <source src="{{ item.src }}" type="video/mp4">
+          <video controls autoplay loop muted playsinline>
+            <source src="{{ item.src | relative_url}}" type="video/mp4">
           </video>
         {% endif %}
       {% endfor %}
