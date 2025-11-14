@@ -35,18 +35,37 @@ layout: default
     <!-- Media grid (images/videos) -->
     {% if page.media %}
     <div class="post-media-grid {% if page.media_columns %}columns-{{ page.media_columns }}{% endif %}">
-      {% for item in page.media %}
-        {% if item.type == "image" %}
-          <img src="{{ item.src | relative_url }}" alt="Post image {{ forloop.index }}">
-        {% elsif item.type == "video" %}
-          <video controls autoplay loop muted playsinline>
-            <source src="{{ item.src | relative_url}}" type="video/mp4">
-          </video>
-        {% endif %}
-      {% endfor %}
-    </div>
+  {% for item in page.media %}
+    {% if item.type == "image" %}
+      <div class="media-wrapper">
+        <img src="{{ item.src | relative_url }}" 
+             alt="Post image {{ forloop.index }}"
+             style="
+               min-width: 100%;
+               min-height: 100%;
+               object-fit: cover;
+               object-position: {{ item.crop_x | default:50 }}% {{ item.crop_y | default:50 }}%;
+               transform: scale({{ item.zoom | default:1 }});
+               transform-origin: {{ item.crop_x | default:50 }}% {{ item.crop_y | default:50 }}%;
+             ">
+      </div>
+    {% elsif item.type == "video" %}
+      <div class="media-wrapper">
+        <video controls autoplay loop muted playsinline>
+          <source src="{{ item.src | relative_url}}" type="video/mp4">
+        </video>
+      </div>
     {% endif %}
-  </section>
+  {% endfor %}
+</div>
+{% endif %}
+<!-- Back to Blog Link -->
+<div class="back-to-blog" style="text-align: right; padding: 20px 0;">
+  <a href="{{ '/rambles' | relative_url }}" onclick="sessionStorage.setItem('scrollPos', window.scrollY)">← Back to rambles</a>
+</div>
+
+
+</section>
 
 </article>
 

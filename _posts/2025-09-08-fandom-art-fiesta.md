@@ -8,7 +8,9 @@ author: Laksayo
 featured_image: "/assets/images/rambles/faf-1.jpg"
 media:
   - type: image
-    src: "assets/images/rambles/3pimples-originstory.jpg"
+    src: "/assets/images/rambles/3pimples-originstory.jpg"
+  - type: image
+    src: "/assets/images/rambles/faf-1.jpg"
 
 permalink: /rambles/fandom-art-fiesta/
 ---

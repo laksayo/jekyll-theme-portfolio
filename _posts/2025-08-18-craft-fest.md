@@ -8,7 +8,7 @@ author: Laksayo
 featured_image: "/assets/images/rambles/craftfest-1.jpg"
 media:
   - type: image
-    src: 
+    src:  "/assets/images/rambles/craftfest-1.jpg"
     
 permalink: /rambles/craft-fest/
 ---
